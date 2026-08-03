@@ -31,3 +31,33 @@
     grid-template-columns:1fr;
 
 }
+
+/*==========================
+SERVICES
+==========================*/
+
+@media(max-width:1200px){
+
+    .services-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .service-image{
+
+        height:240px;
+
+    }
+
+}
