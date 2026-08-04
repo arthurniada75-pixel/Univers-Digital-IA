@@ -133,3 +133,81 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+/* =====================================================
+                HERO ANIMATIONS
+===================================================== */
+
+window.addEventListener("load", () => {
+
+    const heroElements = [
+
+        ".hero-badge",
+
+        ".hero h1",
+
+        ".hero p",
+
+        ".hero-buttons",
+
+        ".hero-domains",
+
+        ".hero-stats",
+
+        ".hero-image"
+
+    ];
+
+    heroElements.forEach((selector, index) => {
+
+        const element = document.querySelector(selector);
+
+        if (!element) return;
+
+        element.style.opacity = "0";
+
+        element.style.transform = "translateY(40px)";
+
+        element.style.transition =
+            "all .8s ease " + (index * 0.15) + "s";
+
+        setTimeout(() => {
+
+            element.style.opacity = "1";
+
+            element.style.transform = "translateY(0)";
+
+        },100);
+
+    });
+
+});
+
+
+/* =====================================================
+          ANIMATION AU SCROLL
+===================================================== */
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+},{
+
+    threshold:.15
+
+});
+
+document.querySelectorAll("section").forEach(section=>{
+
+    observer.observe(section);
+
+});
