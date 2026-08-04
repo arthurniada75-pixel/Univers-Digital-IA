@@ -356,3 +356,430 @@ ul{
     border-radius:5px;
 
 }
+
+/* =====================================================
+                    HERO SECTION
+===================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:170px 0 100px;
+
+    background:
+    radial-gradient(circle at top right,#dbeafe 0%,transparent 35%),
+    radial-gradient(circle at bottom left,#bfdbfe 0%,transparent 30%),
+    #f8fafc;
+
+}
+
+.hero-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(37,99,235,.05) 1px, transparent 1px),
+
+    linear-gradient(90deg, rgba(37,99,235,.05) 1px, transparent 1px);
+
+    background-size:45px 45px;
+
+    opacity:.45;
+
+    pointer-events:none;
+
+}
+
+.hero-container{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.hero-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:28px;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    margin-bottom:28px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#475569;
+
+    margin-bottom:35px;
+
+    max-width:650px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.btn-primary{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:16px 32px;
+
+    border-radius:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 15px 40px rgba(37,99,235,.25);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    background:#1d4ed8;
+
+}
+
+.btn-secondary{
+
+    border:2px solid #2563eb;
+
+    color:#2563eb;
+
+    padding:16px 32px;
+
+    border-radius:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn-secondary:hover{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.hero-domains{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-bottom:40px;
+
+}
+
+.hero-domains span{
+
+    background:#fff;
+
+    padding:12px 18px;
+
+    border-radius:40px;
+
+    border:1px solid #e2e8f0;
+
+    font-size:14px;
+
+    color:#334155;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.05);
+
+}
+
+.hero-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(15,23,42,.06);
+
+}
+
+.stat-card h3{
+
+    font-size:28px;
+
+    color:#2563eb;
+
+    margin-bottom:8px;
+
+}
+
+.stat-card p{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.4;
+
+}
+
+.hero-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-image-card{
+
+    width:100%;
+
+    max-width:500px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:30px;
+
+    padding:20px;
+
+    box-shadow:0 30px 70px rgba(15,23,42,.12);
+
+}
+
+.hero-image-card img{
+
+    width:100%;
+
+    border-radius:22px;
+
+    display:block;
+
+}
+
+.floating-badge{
+
+    position:absolute;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 18px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:18px;
+
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#0f172a;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+.floating-badge i{
+
+    color:#2563eb;
+
+}
+
+.badge-facebook{
+
+    top:40px;
+
+    left:-40px;
+
+}
+
+.badge-ia{
+
+    top:120px;
+
+    right:-30px;
+
+}
+
+.badge-trading{
+
+    bottom:120px;
+
+    left:-30px;
+
+}
+
+.badge-web{
+
+    bottom:40px;
+
+    right:-40px;
+
+}
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.scroll-indicator a{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:#2563eb;
+
+    box-shadow:0 12px 30px rgba(15,23,42,.08);
+
+    transition:.35s;
+
+}
+
+.scroll-indicator a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
