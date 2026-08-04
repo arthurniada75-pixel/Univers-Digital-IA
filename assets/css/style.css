@@ -1,26 +1,21 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+:root{
 
-html{
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
 
-    scroll-behavior:smooth;
+    --secondary:#38bdf8;
 
-}
+    --dark:#0f172a;
 
-body{
+    --text:#475569;
 
-    font-family:Arial, Helvetica, sans-serif;
-    background:#fff;
-    color:#111827;
+    --white:#ffffff;
 
-}
+    --background:#f8fafc;
 
-body{
+    --shadow:0 20px 50px rgba(15,23,42,.08);
 
-    padding-top:85px;
+    --radius:24px;
 
 }
 
