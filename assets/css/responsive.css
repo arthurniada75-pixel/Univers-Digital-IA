@@ -1,8 +1,24 @@
-@media(max-width:992px){
+/* ==========================================
+   RESPONSIVE - TABLETTE
+========================================== */
 
-    nav{
+@media (max-width:1100px){
 
-        display:none;
+    .navbar{
+
+        padding:14px 18px;
+
+    }
+
+    .nav-links{
+
+        gap:20px;
+
+    }
+
+    .nav-links a{
+
+        font-size:14px;
 
     }
 
@@ -12,7 +28,90 @@
 
     }
 
-    .project-btn{
+    .btn-whatsapp{
+
+        padding:12px 18px;
+
+        font-size:13px;
+
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width:900px){
+
+    .header{
+
+        top:12px;
+
+        width:95%;
+
+    }
+
+    .navbar{
+
+        height:74px;
+
+        padding:0 18px;
+
+    }
+
+    .logo-text{
+
+        height:28px;
+
+    }
+
+    .logo-icon{
+
+        width:46px;
+
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:0;
+
+        right:-100%;
+
+        width:300px;
+
+        height:100vh;
+
+        background:#ffffff;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:35px;
+
+        box-shadow:-10px 0 40px rgba(0,0,0,.08);
+
+        transition:.4s ease;
+
+        z-index:999;
+
+    }
+
+    .nav-links.active{
+
+        right:0;
+
+    }
+
+    .nav-actions{
 
         display:none;
 
@@ -22,41 +121,34 @@
 
         display:block;
 
-    }
-
-}
-
-.why-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-/*==========================
-SERVICES
-==========================*/
-
-@media(max-width:1200px){
-
-    .services-grid{
-
-        grid-template-columns:repeat(2,1fr);
+        z-index:1000;
 
     }
 
 }
 
-@media(max-width:768px){
 
-    .services-grid{
+/* ==========================================
+   PETITS SMARTPHONES
+========================================== */
 
-        grid-template-columns:1fr;
+@media (max-width:600px){
+
+    .logo-text{
+
+        display:none;
 
     }
 
-    .service-image{
+    .logo-icon{
 
-        height:240px;
+        width:42px;
+
+    }
+
+    .nav-links{
+
+        width:100%;
 
     }
 
