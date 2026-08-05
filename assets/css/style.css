@@ -783,3 +783,309 @@ ul{
     }
 
 }
+
+/* =====================================================
+            POURQUOI CHOISIR
+===================================================== */
+
+.why-us{
+
+    position:relative;
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+    overflow:hidden;
+
+}
+
+.section-title{
+
+    max-width:760px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+}
+
+.section-badge{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+}
+
+.section-title h2{
+
+    font-size:46px;
+
+    line-height:1.2;
+
+    color:#0f172a;
+
+    margin-bottom:22px;
+
+}
+
+.section-title h2 span{
+
+    color:#2563eb;
+
+}
+
+.section-title p{
+
+    color:#64748b;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+}
+
+/* ======================
+      CARTES
+====================== */
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-bottom:120px;
+
+}
+
+.why-card{
+
+    position:relative;
+
+    padding:45px 30px;
+
+    border-radius:28px;
+
+    background:#ffffff;
+
+    border:1px solid #e2e8f0;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 15px 40px rgba(15,23,42,.05);
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 60px rgba(37,99,235,.12);
+
+}
+
+.card-number{
+
+    position:absolute;
+
+    top:18px;
+
+    right:20px;
+
+    font-size:70px;
+
+    font-weight:700;
+
+    color:rgba(37,99,235,.05);
+
+    user-select:none;
+
+}
+
+.why-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:18px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    margin-bottom:28px;
+
+}
+
+.why-card h3{
+
+    font-size:24px;
+
+    margin-bottom:16px;
+
+    color:#0f172a;
+
+}
+
+.why-card p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* ======================
+      METHODE
+====================== */
+
+.method{
+
+    background:#f8fafc;
+
+    border-radius:35px;
+
+    padding:70px;
+
+}
+
+.method-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.method-title h2{
+
+    font-size:38px;
+
+    margin-bottom:18px;
+
+    color:#0f172a;
+
+}
+
+.method-title p{
+
+    color:#64748b;
+
+    font-size:17px;
+
+}
+
+.method-steps{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:space-between;
+
+}
+
+.step{
+
+    width:220px;
+
+    text-align:center;
+
+}
+
+.step-circle{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    box-shadow:0 20px 40px rgba(37,99,235,.20);
+
+}
+
+.step h4{
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+    color:#0f172a;
+
+}
+
+.step p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+.step-line{
+
+    flex:1;
+
+    height:3px;
+
+    margin-top:35px;
+
+    background:linear-gradient(
+        to right,
+        #2563eb,
+        #93c5fd
+    );
+
+    border-radius:20px;
+
+}
