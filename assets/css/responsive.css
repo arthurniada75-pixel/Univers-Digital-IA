@@ -577,3 +577,127 @@
     }
 
 }
+
+/* =====================================================
+                NOS SERVICES RESPONSIVE
+===================================================== */
+
+/* ===========================
+        TABLETTE
+=========================== */
+
+@media (max-width:1100px){
+
+    .services-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:25px;
+
+    }
+
+    .service-image{
+
+        height:220px;
+
+    }
+
+}
+
+
+/* ===========================
+            MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .services{
+
+        padding:90px 0;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .service-card{
+
+        max-width:500px;
+
+        width:100%;
+
+        margin:auto;
+
+    }
+
+    .service-image{
+
+        height:240px;
+
+    }
+
+    .service-content{
+
+        padding:24px;
+
+    }
+
+    .service-content h3{
+
+        font-size:22px;
+
+    }
+
+}
+
+
+/* ===========================
+        PETITS SMARTPHONES
+=========================== */
+
+@media (max-width:480px){
+
+    .service-image{
+
+        height:210px;
+
+    }
+
+    .service-tag{
+
+        font-size:11px;
+
+        padding:7px 12px;
+
+    }
+
+    .service-content{
+
+        padding:20px;
+
+    }
+
+    .service-content h3{
+
+        font-size:20px;
+
+    }
+
+    .service-content p{
+
+        font-size:15px;
+
+    }
+
+    .service-btn{
+
+        width:100%;
+
+    }
+
+}
