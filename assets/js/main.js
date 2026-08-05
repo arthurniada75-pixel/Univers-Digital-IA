@@ -211,3 +211,39 @@ document.querySelectorAll("section").forEach(section=>{
     observer.observe(section);
 
 });
+
+/* =====================================================
+      ANIMATION SECTION POURQUOI CHOISIR
+===================================================== */
+
+const whyCards = document.querySelectorAll(".why-card");
+
+const whyObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.style.opacity="1";
+
+            entry.target.style.transform="translateY(0)";
+
+        }
+
+    });
+
+},{
+    threshold:0.2
+});
+
+whyCards.forEach((card,index)=>{
+
+    card.style.opacity="0";
+
+    card.style.transform="translateY(60px)";
+
+    card.style.transition=`all .8s ease ${index*0.15}s`;
+
+    whyObserver.observe(card);
+
+});
