@@ -247,3 +247,36 @@ whyCards.forEach((card,index)=>{
     whyObserver.observe(card);
 
 });
+
+/* =====================================================
+            ANIMATION DES SERVICES
+===================================================== */
+
+const serviceCards = document.querySelectorAll(".service-card");
+
+const serviceObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.style.opacity="1";
+            entry.target.style.transform="translateY(0)";
+
+        }
+
+    });
+
+},{
+    threshold:0.15
+});
+
+serviceCards.forEach((card,index)=>{
+
+    card.style.opacity="0";
+    card.style.transform="translateY(50px)";
+    card.style.transition=`all .7s ease ${index*0.12}s`;
+
+    serviceObserver.observe(card);
+
+});
