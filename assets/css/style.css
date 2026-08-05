@@ -1097,7 +1097,6 @@ ul{
 .services{
 
     padding:120px 0;
-
     background:#f8fafc;
 
 }
@@ -1105,70 +1104,33 @@ ul{
 .services-grid{
 
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:30px;
-
     margin-top:70px;
 
 }
 
 .service-card{
 
-    display:flex;
-
-    flex-direction:column;
-
-    background:#ffffff;
-
+    background:#fff;
     border-radius:24px;
-
     overflow:hidden;
-
     text-decoration:none;
+    border:1px solid #e5e7eb;
+    box-shadow:0 15px 40px rgba(15,23,42,.06);
 
-    border:1px solid #e2e8f0;
+    transition:.35s;
 
-    transition:.4s;
-
-    position:relative;
-
-    box-shadow:0 15px 40px rgba(15,23,42,.05);
+    display:flex;
+    flex-direction:column;
 
 }
 
 .service-card:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-10px);
 
-    box-shadow:0 30px 70px rgba(37,99,235,.15);
-
-}
-
-.service-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(135deg,
-    rgba(37,99,235,.06),
-    transparent);
-
-    opacity:0;
-
-    transition:.4s;
-
-    z-index:1;
-
-}
-
-.service-card:hover::before{
-
-    opacity:1;
+    box-shadow:0 25px 60px rgba(37,99,235,.15);
 
 }
 
@@ -1176,9 +1138,13 @@ ul{
 
     position:relative;
 
+    width:100%;
+
+    aspect-ratio:1/1;
+
     overflow:hidden;
 
-    height:240px;
+    background:#eef4ff;
 
 }
 
@@ -1190,36 +1156,13 @@ ul{
 
     object-fit:cover;
 
-    transition:.6s;
-
-    display:block;
+    transition:.5s;
 
 }
 
-.service-card:hover .service-image img{
+.service-card:hover img{
 
-    transform:scale(1.08);
-
-}
-
-.service-image::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    right:0;
-
-    bottom:0;
-
-    height:80px;
-
-    background:linear-gradient(
-        transparent,
-        rgba(15,23,42,.25)
-    );
+    transform:scale(1.05);
 
 }
 
@@ -1235,15 +1178,13 @@ ul{
 
     color:#fff;
 
-    padding:8px 14px;
-
-    border-radius:30px;
-
     font-size:12px;
 
     font-weight:600;
 
-    z-index:2;
+    padding:8px 14px;
+
+    border-radius:30px;
 
 }
 
@@ -1257,19 +1198,19 @@ ul{
 
     flex:1;
 
-    position:relative;
-
-    z-index:2;
-
 }
 
 .service-content h3{
 
-    font-size:23px;
-
     color:#0f172a;
 
+    font-size:28px;
+
+    font-weight:700;
+
     margin-bottom:15px;
+
+    line-height:1.2;
 
 }
 
@@ -1279,7 +1220,7 @@ ul{
 
     line-height:1.8;
 
-    margin-bottom:28px;
+    margin-bottom:30px;
 
     flex:1;
 
@@ -1293,13 +1234,15 @@ ul{
 
     justify-content:center;
 
-    background:#eff6ff;
+    width:fit-content;
 
-    color:#2563eb;
-
-    padding:14px 24px;
+    padding:14px 26px;
 
     border-radius:14px;
+
+    background:#2563eb;
+
+    color:#fff;
 
     font-weight:600;
 
@@ -1309,8 +1252,6 @@ ul{
 
 .service-card:hover .service-btn{
 
-    background:#2563eb;
-
-    color:#ffffff;
+    background:#1d4ed8;
 
 }
