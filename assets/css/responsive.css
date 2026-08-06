@@ -578,62 +578,141 @@
 
 }
 
-/* =====================================================
-            SERVICES RESPONSIVE
-===================================================== */
+/*======================================================
+                SERVICES RESPONSIVE
+======================================================*/
 
-@media(max-width:1100px){
+/* ===========================
+        ÉCRANS ≤ 1200px
+=========================== */
 
-.services-grid{
+@media (max-width:1200px){
 
-grid-template-columns:repeat(2,1fr);
+    .services-grid{
 
-}
+        grid-template-columns:repeat(3,1fr);
 
-}
+        gap:28px;
 
-@media(max-width:768px){
-
-.services{
-
-padding:90px 0;
+    }
 
 }
 
-.services-grid{
 
-grid-template-columns:1fr;
+/* ===========================
+        TABLETTES
+=========================== */
+
+@media (max-width:992px){
+
+    .services{
+
+        padding:90px 0;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:25px;
+
+    }
+
+    .service-image{
+
+        height:240px;
+
+    }
+
+}
+
+
+/* ===========================
+        SMARTPHONES
+=========================== */
+
+@media (max-width:768px){
+
+    .services{
+
+        padding:80px 0;
+
+    }
+
+    .section-title{
+
+        margin-bottom:50px;
+
+    }
+
+    .section-title h2{
+
+        font-size:2rem;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+    }
+
+    .service-card{
+
+        max-width:500px;
+
+        width:100%;
+
+        margin:auto;
+
+    }
+
+    .service-image{
+
+        height:260px;
+
+    }
 
 }
 
-.service-card{
 
-max-width:480px;
+/* ===========================
+      PETITS SMARTPHONES
+=========================== */
 
-margin:auto;
+@media (max-width:480px){
 
-}
+    .service-image{
 
-.service-content h3{
+        height:220px;
 
-font-size:24px;
+    }
 
-}
+    .service-content{
 
-}
+        padding:22px;
 
-@media(max-width:480px){
+    }
 
-.service-content{
+    .service-content h3{
 
-padding:22px;
+        font-size:1.4rem;
 
-}
+    }
 
-.service-content h3{
+    .service-content p{
 
-font-size:22px;
+        font-size:.95rem;
 
-}
+    }
+
+    .service-btn{
+
+        height:52px;
+
+    }
 
 }
