@@ -1319,3 +1319,187 @@ ul{
     width: 100% !important;
     box-sizing: border-box !important;
 }
+
+/* =====================================================
+                    PORTFOLIO
+===================================================== */
+
+.portfolio{
+    padding:110px 0;
+    background:#ffffff;
+}
+
+/* =========================
+        TITRE PORTFOLIO
+========================= */
+
+.portfolio-title{
+    margin-bottom:45px;
+}
+
+/* =========================
+            FILTRES
+========================= */
+
+.portfolio-filters{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:55px;
+}
+
+.portfolio-filter{
+    border:1px solid #dbe7f5;
+    background:#ffffff;
+    color:#475569;
+    padding:11px 20px;
+    border-radius:50px;
+    font-family:inherit;
+    font-size:.9rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.portfolio-filter:hover{
+    border-color:#2563eb;
+    color:#2563eb;
+    background:#f5f9ff;
+}
+
+.portfolio-filter.active{
+    background:#2563eb;
+    color:#ffffff;
+    border-color:#2563eb;
+}
+
+/* =========================
+        GRILLE
+========================= */
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:30px;
+    width:100%;
+}
+
+/* =========================
+          CARTE
+========================= */
+
+.portfolio-item{
+    min-width:0;
+    overflow:hidden;
+    border-radius:24px;
+    background:#ffffff;
+    border:1px solid #e5edf7;
+    box-shadow:0 15px 40px rgba(15,23,42,.07);
+    transition:.4s ease;
+}
+
+.portfolio-item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 55px rgba(37,99,235,.14);
+}
+
+/* =========================
+          IMAGE
+========================= */
+
+.portfolio-image{
+    position:relative;
+    width:100%;
+    aspect-ratio:4 / 3;
+    overflow:hidden;
+    background:#eef4ff;
+}
+
+.portfolio-image img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s ease;
+}
+
+.portfolio-item:hover .portfolio-image img{
+    transform:scale(1.06);
+}
+
+/* =========================
+          OVERLAY
+========================= */
+
+.portfolio-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:flex-start;
+    padding:28px;
+    background:linear-gradient(
+        to top,
+        rgba(8,20,45,.92),
+        rgba(8,20,45,.35),
+        transparent
+    );
+    opacity:0;
+    transition:.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay{
+    opacity:1;
+}
+
+/* =========================
+          CATÉGORIE
+========================= */
+
+.portfolio-category{
+    display:inline-block;
+    margin-bottom:10px;
+    padding:7px 13px;
+    border-radius:30px;
+    background:#2563eb;
+    color:#ffffff;
+    font-size:.75rem;
+    font-weight:600;
+}
+
+/* =========================
+            TITRE
+========================= */
+
+.portfolio-overlay h3{
+    margin:0 0 18px;
+    color:#ffffff;
+    font-size:1.35rem;
+    line-height:1.3;
+}
+
+/* =========================
+          BOUTON
+========================= */
+
+.portfolio-view{
+    border:1px solid rgba(255,255,255,.5);
+    background:rgba(255,255,255,.12);
+    color:#ffffff;
+    padding:10px 18px;
+    border-radius:10px;
+    font-family:inherit;
+    font-size:.85rem;
+    font-weight:600;
+    cursor:pointer;
+    backdrop-filter:blur(8px);
+    transition:.3s ease;
+}
+
+.portfolio-view:hover{
+    background:#ffffff;
+    color:#2563eb;
+}
