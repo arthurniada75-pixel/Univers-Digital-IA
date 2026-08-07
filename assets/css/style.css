@@ -1289,3 +1289,33 @@ ul{
     background:#1747c7;
 
 }
+
+/* =====================================================
+   CORRECTION DEFINITIVE GRILLE SERVICES
+===================================================== */
+
+.services .services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 35px !important;
+    width: 100% !important;
+}
+
+.services .service-card {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.services .service-image {
+    width: 100% !important;
+    height: 260px !important;
+}
+
+.services .service-content {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
