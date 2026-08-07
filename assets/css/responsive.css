@@ -750,3 +750,112 @@
     }
 
 }
+
+/* =====================================================
+              PORTFOLIO RESPONSIVE
+===================================================== */
+
+
+/* =========================
+        TABLETTES
+========================= */
+
+@media (max-width: 992px){
+
+    .portfolio{
+        padding:90px 0;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:25px;
+    }
+
+    .portfolio-filters{
+        gap:10px;
+        margin-bottom:45px;
+    }
+
+}
+
+
+/* =========================
+        SMARTPHONES
+========================= */
+
+@media (max-width: 768px){
+
+    .portfolio{
+        padding:80px 0;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .portfolio-item{
+        max-width:500px;
+        width:100%;
+        margin:0 auto;
+    }
+
+    .portfolio-image{
+        aspect-ratio:4 / 3;
+    }
+
+    .portfolio-overlay{
+        opacity:1;
+    }
+
+}
+
+
+/* =========================
+      PETITS SMARTPHONES
+========================= */
+
+@media (max-width:480px){
+
+    .portfolio{
+        padding:70px 0;
+    }
+
+    .portfolio-title{
+        margin-bottom:35px;
+    }
+
+    .portfolio-filters{
+        justify-content:flex-start;
+        overflow-x:auto;
+        flex-wrap:nowrap;
+        padding-bottom:8px;
+        margin-bottom:35px;
+
+        scrollbar-width:none;
+    }
+
+    .portfolio-filters::-webkit-scrollbar{
+        display:none;
+    }
+
+    .portfolio-filter{
+        flex:0 0 auto;
+        padding:10px 17px;
+        font-size:.82rem;
+    }
+
+    .portfolio-image{
+        aspect-ratio:1 / 1;
+    }
+
+    .portfolio-overlay{
+        padding:20px;
+    }
+
+    .portfolio-overlay h3{
+        font-size:1.15rem;
+        margin-bottom:14px;
+    }
+
+}
