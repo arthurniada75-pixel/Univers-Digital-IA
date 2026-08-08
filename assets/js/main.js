@@ -337,3 +337,248 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+/* =====================================================
+        PORTFOLIO — DÉTAILS DES PROJETS
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const projectModal = document.getElementById("projectModal");
+    const projectModalOverlay = document.getElementById("projectModalOverlay");
+    const projectModalClose = document.getElementById("projectModalClose");
+
+    const projectModalImage = document.getElementById("projectModalImage");
+    const projectModalCategory = document.getElementById("projectModalCategory");
+    const projectModalTitle = document.getElementById("projectModalTitle");
+
+    const projectModalNeed = document.getElementById("projectModalNeed");
+    const projectModalApproach = document.getElementById("projectModalApproach");
+    const projectModalProcess = document.getElementById("projectModalProcess");
+    const projectModalResult = document.getElementById("projectModalResult");
+
+    const projectModalWhatsapp = document.getElementById("projectModalWhatsapp");
+
+    const projectButtons = document.querySelectorAll(".portfolio-view");
+
+
+    /* =================================================
+                    DONNÉES DES PROJETS
+    ================================================= */
+
+    const projects = [
+
+        {
+            image: "https://d1yei2z3i6k35z.cloudfront.net/15223816/6a7625a81604b6.69832408_ChatGPTImage28juil.202610_03_24.png",
+
+            category: "Publicité",
+
+            title: "Affiche publicitaire",
+
+            need:
+                "Créer un support visuel capable de présenter une offre de manière claire, professionnelle et attractive.",
+
+            approach:
+                "Nous travaillons sur la hiérarchie des informations, la composition visuelle, la typographie et l'identité graphique afin de rendre le message immédiatement compréhensible.",
+
+            process:
+                "Nous définissons d'abord l'objectif de l'affiche, puis nous organisons les informations essentielles avant de concevoir le visuel et d'effectuer les ajustements nécessaires.",
+
+            result:
+                "Obtenir une affiche professionnelle adaptée à la communication digitale et aux réseaux sociaux."
+        },
+
+
+        {
+            image: "https://d1yei2z3i6k35z.cloudfront.net/15223816/6a7625a81721d5.16934788_ChatGPTImage3ao%C3%BBt202615_58_56.png",
+
+            category: "Publicité",
+
+            title: "Publicité Facebook",
+
+            need:
+                "Aider une entreprise à présenter son offre à une audience pertinente sur Facebook.",
+
+            approach:
+                "Nous combinons visuel publicitaire, message marketing et ciblage afin de construire une communication cohérente avec l'objectif de la campagne.",
+
+            process:
+                "Nous définissons l'objectif, identifions l'audience, préparons les éléments publicitaires, lançons la campagne puis analysons les performances pour effectuer les optimisations nécessaires.",
+
+            result:
+                "Améliorer la visibilité de l'offre et générer davantage d'opportunités commerciales grâce à une campagne structurée."
+        },
+
+
+        {
+            image: "https://d1yei2z3i6k35z.cloudfront.net/15223816/6a7625a7d29834.03362892_ChatGPTImage28juil.202613_03_00.png",
+
+            category: "Site web",
+
+            title: "Création de site web",
+
+            need:
+                "Créer une présence professionnelle sur internet permettant de présenter une activité et de faciliter la prise de contact.",
+
+            approach:
+                "Nous construisons une interface moderne avec une navigation claire, une présentation structurée des services et des appels à l'action visibles.",
+
+            process:
+                "Nous définissons la structure du site, organisons les contenus, intégrons les éléments visuels puis optimisons l'expérience sur ordinateur, tablette et mobile.",
+
+            result:
+                "Disposer d'un site professionnel capable de présenter efficacement une activité et d'orienter les visiteurs vers une action."
+        },
+
+
+        {
+            image: "https://d1yei2z3i6k35z.cloudfront.net/15223816/6a7625a7d68905.10845922_ChatGPTImage28juil.202612_57_54.png",
+
+            category: "Logo",
+
+            title: "Création de logo",
+
+            need:
+                "Créer une identité visuelle reconnaissable permettant à une marque de se différencier.",
+
+            approach:
+                "Nous recherchons une combinaison équilibrée entre symbole, typographie, simplicité et cohérence avec l'univers de la marque.",
+
+            process:
+                "Nous analysons l'activité et son positionnement, développons une direction graphique puis construisons le logo autour d'une identité claire et mémorisable.",
+
+            result:
+                "Obtenir une identité visuelle professionnelle pouvant être utilisée sur les réseaux sociaux, supports publicitaires et différents supports de communication."
+        },
+
+
+        {
+            image: "https://d1yei2z3i6k35z.cloudfront.net/15223816/6a7625a7d320e4.81524941_ChatGPTImage28juil.202610_03_55.png",
+
+            category: "Design graphique",
+
+            title: "Création graphique",
+
+            need:
+                "Transformer une idée ou une information commerciale en un visuel clair et professionnel.",
+
+            approach:
+                "Nous travaillons la composition, les couleurs, les images et la typographie afin de créer un visuel cohérent avec l'identité de la marque.",
+
+            process:
+                "Nous identifions le message principal, sélectionnons les éléments visuels appropriés puis construisons et ajustons la composition finale.",
+
+            result:
+                "Créer un support graphique professionnel pouvant renforcer la communication d'une entreprise sur ses différents canaux."
+        },
+
+
+        {
+            image: "https://d1yei2z3i6k35z.cloudfront.net/15223816/6a7625a81966e4.89680626_ChatGPTImage3ao%C3%BBt202616_11_53.png",
+
+            category: "Trading",
+
+            title: "Analyse Trading",
+
+            need:
+                "Présenter une analyse structurée du marché afin d'identifier des scénarios possibles et de mieux organiser une prise de décision.",
+
+            approach:
+                "Nous utilisons notamment l'analyse du prix, les zones de liquidité, la structure du marché et les concepts Smart Money / ICT.",
+
+            process:
+                "Nous commençons par analyser le contexte général, identifions la structure et les zones importantes, puis construisons différents scénarios avec une gestion du risque adaptée.",
+
+            result:
+                "Disposer d'une analyse structurée permettant de mieux préparer un scénario de marché, sans garantir un résultat financier."
+        }
+
+    ];
+
+
+    /* =================================================
+                OUVERTURE D'UN PROJET
+    ================================================= */
+
+    projectButtons.forEach(function (button, index) {
+
+        button.addEventListener("click", function () {
+
+            const project = projects[index];
+
+            if (!project) {
+                return;
+            }
+
+            projectModalImage.src = project.image;
+            projectModalImage.alt = project.title;
+
+            projectModalCategory.textContent = project.category;
+            projectModalTitle.textContent = project.title;
+
+            projectModalNeed.textContent = project.need;
+            projectModalApproach.textContent = project.approach;
+            projectModalProcess.textContent = project.process;
+            projectModalResult.textContent = project.result;
+
+
+            /* Message WhatsApp */
+
+            const message =
+                "Bonjour,%0A%0A" +
+                "Je suis intéressé(e) par un projet similaire à : " +
+                project.title +
+                ".%0A%0A" +
+                "J'ai découvert cette réalisation sur le site UNIVERS DIGITAL & IA et je souhaite obtenir plus d'informations.";
+
+            projectModalWhatsapp.href =
+                "https://wa.me/22675210944?text=" + message;
+
+
+            /* Afficher la fenêtre */
+
+            projectModal.classList.add("active");
+
+            document.body.style.overflow = "hidden";
+
+        });
+
+    });
+
+
+    /* =================================================
+                    FERMER LA FENÊTRE
+    ================================================= */
+
+    function closeProjectModal() {
+
+        projectModal.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    /* Bouton X */
+
+    projectModalClose.addEventListener("click", closeProjectModal);
+
+
+    /* Clic sur le fond */
+
+    projectModalOverlay.addEventListener("click", closeProjectModal);
+
+
+    /* Touche Échap */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            closeProjectModal();
+
+        }
+
+    });
+
+});
