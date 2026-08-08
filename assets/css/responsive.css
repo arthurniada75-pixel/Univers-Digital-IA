@@ -859,3 +859,162 @@
     }
 
 }
+
+/* =====================================================
+        PORTFOLIO — MODAL RESPONSIVE
+===================================================== */
+
+
+/* =========================
+        TABLETTES
+========================= */
+
+@media (max-width: 992px){
+
+    .project-modal{
+        padding:20px;
+    }
+
+    .project-modal-container{
+        width:min(800px,100%);
+        max-height:92vh;
+
+        grid-template-columns:1fr;
+
+        overflow-y:auto;
+    }
+
+    .project-modal-image{
+        min-height:350px;
+        max-height:420px;
+    }
+
+    .project-modal-content{
+        padding:40px;
+    }
+
+}
+
+
+/* =========================
+        SMARTPHONES
+========================= */
+
+@media (max-width: 768px){
+
+    .project-modal{
+        padding:12px;
+    }
+
+    .project-modal-container{
+        width:100%;
+        max-height:94vh;
+
+        border-radius:20px;
+
+        display:block;
+    }
+
+    .project-modal-image{
+        min-height:0;
+        height:auto;
+
+        aspect-ratio:4 / 3;
+    }
+
+    .project-modal-image img{
+        object-fit:cover;
+    }
+
+    .project-modal-content{
+        padding:30px 24px 28px;
+    }
+
+    .project-modal-content h2{
+        font-size:1.8rem;
+        margin-bottom:28px;
+    }
+
+    .project-detail{
+        margin-bottom:23px;
+    }
+
+    .project-detail h3{
+        font-size:1rem;
+    }
+
+    .project-detail p{
+        font-size:.94rem;
+        line-height:1.7;
+    }
+
+    .project-modal-whatsapp{
+        min-height:52px;
+    }
+
+    .project-modal-close{
+        top:12px;
+        right:12px;
+
+        width:38px;
+        height:38px;
+
+        font-size:24px;
+    }
+
+}
+
+
+/* =========================
+      PETITS SMARTPHONES
+========================= */
+
+@media (max-width:480px){
+
+    .project-modal{
+        padding:8px;
+    }
+
+    .project-modal-container{
+        border-radius:18px;
+        max-height:96vh;
+    }
+
+    .project-modal-image{
+        aspect-ratio:1 / 1;
+    }
+
+    .project-modal-content{
+        padding:25px 20px 22px;
+    }
+
+    .project-modal-category{
+        font-size:.75rem;
+        padding:7px 12px;
+    }
+
+    .project-modal-content h2{
+        font-size:1.55rem;
+        margin-bottom:24px;
+    }
+
+    .project-detail{
+        margin-bottom:20px;
+    }
+
+    .project-detail h3{
+        font-size:.95rem;
+    }
+
+    .project-detail p{
+        font-size:.9rem;
+        line-height:1.65;
+    }
+
+    .project-modal-whatsapp{
+        font-size:.9rem;
+        min-height:50px;
+        padding:0 15px;
+    }
+
+}
