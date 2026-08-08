@@ -280,3 +280,60 @@ serviceCards.forEach((card,index)=>{
     serviceObserver.observe(card);
 
 });
+
+/* =====================================================
+          FILTRES DU PORTFOLIO
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const filters = document.querySelectorAll(".portfolio-filter");
+    const items = document.querySelectorAll(".portfolio-item");
+
+    filters.forEach(function (filter) {
+
+        filter.addEventListener("click", function () {
+
+            /* Retirer la classe active de tous les boutons */
+            filters.forEach(function (button) {
+                button.classList.remove("active");
+            });
+
+            /* Activer le bouton sélectionné */
+            filter.classList.add("active");
+
+            /* Récupérer la catégorie */
+            const category = filter.getAttribute("data-filter");
+
+            /* Afficher / masquer les projets */
+            items.forEach(function (item) {
+
+                const itemCategory = item.getAttribute("data-category");
+
+                if (category === "all" || category === itemCategory) {
+
+                    item.style.display = "";
+
+                    setTimeout(function () {
+                        item.style.opacity = "1";
+                        item.style.transform = "scale(1)";
+                    }, 20);
+
+                } else {
+
+                    item.style.opacity = "0";
+                    item.style.transform = "scale(.95)";
+
+                    setTimeout(function () {
+                        item.style.display = "none";
+                    }, 250);
+
+                }
+
+            });
+
+        });
+
+    });
+
+});
