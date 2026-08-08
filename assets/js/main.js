@@ -491,8 +491,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
             result:
                 "Disposer d'une analyse structurée permettant de mieux préparer un scénario de marché, sans garantir un résultat financier."
-        }
+        },
 
+        {
+            image: "https://d1yei2z3i6k35z.cloudfront.net/15223816/6a7772f2b1e159.96879855_Captured%C3%A9cran2026-07-08123655.png",
+
+            category: "Design graphique",
+
+            title: "Création graphique — Projet 7",
+
+            need:
+                "Concevoir un support graphique professionnel capable de présenter une information ou une offre de manière claire et visuellement attractive.",
+
+            approach:
+                "Nous travaillons la composition, la hiérarchie des informations, la typographie et les éléments visuels afin de créer une communication cohérente et facilement identifiable.",
+
+            process:
+                "Nous partons du besoin de communication, sélectionnons les informations essentielles puis construisons progressivement la composition graphique avant d'effectuer les ajustements finaux.",
+
+            result:
+                "Obtenir un visuel professionnel adapté à la communication digitale et aux différents supports de diffusion de la marque."
+        },
+
+
+        {
+            image: "https://d1yei2z3i6k35z.cloudfront.net/15223816/6a7772f2b1e151.66183647_Captured%C3%A9cran2026-07-08120129.png",
+
+            category: "Design graphique",
+
+            title: "Création graphique — Projet 8",
+
+            need:
+                "Transformer une idée de communication en un visuel structuré, moderne et cohérent avec l'identité de la marque.",
+
+            approach:
+                "Nous mettons l'accent sur la lisibilité, l'équilibre visuel et la mise en valeur du message principal afin que le contenu puisse être compris rapidement.",
+
+            process:
+                "Nous analysons le message à transmettre, organisons les différents éléments graphiques puis travaillons la composition jusqu'à obtenir un résultat équilibré et professionnel.",
+
+            result:
+                "Créer un support graphique pouvant renforcer la présence visuelle de la marque et être utilisé efficacement sur ses différents canaux de communication."
+        }
+       
     ];
 
 
