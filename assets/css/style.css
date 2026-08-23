@@ -2033,3 +2033,211 @@ ul{
 
     font-size:.85rem;
 }
+
+/* =====================================================
+            NOTRE MÉTHODE DE TRAVAIL
+===================================================== */
+
+.process{
+    position:relative;
+    padding:120px 0;
+    background:#ffffff;
+    overflow:hidden;
+}
+
+
+/* =====================================================
+                    EN-TÊTE
+===================================================== */
+
+.process-heading{
+    max-width:780px;
+    margin:0 auto 65px;
+    text-align:center;
+}
+
+.process-label{
+    display:inline-flex;
+    align-items:center;
+
+    padding:9px 16px;
+    margin-bottom:20px;
+
+    border-radius:50px;
+
+    background:#eaf3ff;
+    color:#2563eb;
+
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:.06em;
+}
+
+.process-heading h2{
+    margin:0 0 20px;
+
+    color:#08142d;
+
+    font-size:clamp(2.2rem,4vw,4rem);
+    line-height:1.12;
+    letter-spacing:-.04em;
+}
+
+.process-heading h2 span{
+    color:#2563eb;
+}
+
+.process-heading p{
+    max-width:680px;
+    margin:0 auto;
+
+    color:#64748b;
+
+    font-size:1rem;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+                    ÉTAPES
+===================================================== */
+
+.process-grid{
+    position:relative;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+
+/* Ligne de connexion */
+
+.process-grid::before{
+    content:"";
+
+    position:absolute;
+
+    top:52px;
+    left:8%;
+    right:8%;
+
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+        #dbeafe,
+        #2563eb,
+        #dbeafe
+    );
+
+    z-index:0;
+}
+
+
+/* =====================================================
+                    CARTE
+===================================================== */
+
+.process-card{
+    position:relative;
+    z-index:1;
+
+    min-height:310px;
+
+    padding:32px 25px 28px;
+
+    background:#ffffff;
+
+    border:1px solid #e5edf7;
+    border-radius:22px;
+
+    box-shadow:0 15px 40px rgba(15,23,42,.05);
+
+    transition:.35s ease;
+}
+
+.process-card:hover{
+    transform:translateY(-10px);
+
+    border-color:#c9ddf7;
+
+    box-shadow:0 25px 55px rgba(37,99,235,.12);
+}
+
+
+/* =====================================================
+                    NUMÉRO
+===================================================== */
+
+.process-number{
+    position:relative;
+    z-index:2;
+
+    width:70px;
+    height:70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:30px;
+
+    border-radius:20px;
+
+    background:#2563eb;
+    color:#ffffff;
+
+    font-size:1.15rem;
+    font-weight:800;
+
+    box-shadow:0 12px 25px rgba(37,99,235,.22);
+}
+
+
+/* =====================================================
+                    CONTENU
+===================================================== */
+
+.process-content h3{
+    margin:0 0 14px;
+
+    color:#08142d;
+
+    font-size:1.15rem;
+    line-height:1.35;
+}
+
+.process-content p{
+    margin:0;
+
+    color:#64748b;
+
+    font-size:.92rem;
+    line-height:1.75;
+}
+
+
+/* =====================================================
+                BAS DE SECTION
+===================================================== */
+
+.process-footer{
+    margin-top:55px;
+    text-align:center;
+}
+
+.process-footer p{
+    display:inline-block;
+
+    margin:0;
+    padding:14px 25px;
+
+    border-radius:50px;
+
+    background:#f1f6ff;
+
+    color:#475569;
+
+    font-size:.92rem;
+}
