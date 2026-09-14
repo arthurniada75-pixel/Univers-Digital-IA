@@ -709,3 +709,58 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(statsSection);
 
 });
+
+/* =====================================================
+                    ACCORDÉON FAQ
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    if (!faqItems.length) {
+        return;
+    }
+
+    faqItems.forEach(function (item) {
+
+        const question = item.querySelector(".faq-question");
+
+        if (!question) {
+            return;
+        }
+
+        question.addEventListener("click", function () {
+
+            const isActive = item.classList.contains("active");
+
+            // Fermer toutes les autres questions
+            faqItems.forEach(function (otherItem) {
+                otherItem.classList.remove("active");
+
+                const otherQuestion =
+                    otherItem.querySelector(".faq-question");
+
+                if (otherQuestion) {
+                    otherQuestion.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+                }
+            });
+
+            // Ouvrir la question sélectionnée
+            if (!isActive) {
+                item.classList.add("active");
+
+                question.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+            }
+
+        });
+
+    });
+
+});
