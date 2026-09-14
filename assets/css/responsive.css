@@ -1654,3 +1654,188 @@
     }
 
 }
+
+/* =====================================================
+             RESPONSIVE — SECTION CONTACT
+===================================================== */
+
+@media (max-width: 1024px){
+
+    .contact{
+        padding:90px 0;
+    }
+
+    .contact-heading{
+        margin-bottom:50px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .contact-content{
+        padding-top:0;
+    }
+
+    .contact-intro{
+        max-width:700px;
+        margin:0 auto 35px;
+        text-align:center;
+    }
+
+    .contact-info{
+        max-width:700px;
+        margin:0 auto;
+    }
+
+    .contact-card{
+        max-width:700px;
+        width:100%;
+        margin:0 auto;
+    }
+
+}
+
+
+/* =====================================================
+                         MOBILE
+===================================================== */
+
+@media (max-width: 767px){
+
+    .contact{
+        padding:75px 0;
+    }
+
+    .contact-heading{
+        margin-bottom:40px;
+    }
+
+    .contact-label{
+        padding:8px 13px;
+        font-size:.72rem;
+    }
+
+    .contact-heading h2{
+        font-size:2rem;
+        line-height:1.18;
+    }
+
+    .contact-heading p{
+        font-size:.92rem;
+        line-height:1.7;
+    }
+
+    .contact-grid{
+        gap:35px;
+    }
+
+    .contact-intro{
+        margin-bottom:28px;
+    }
+
+    .contact-intro h3{
+        font-size:1.7rem;
+        line-height:1.25;
+    }
+
+    .contact-intro p{
+        font-size:.9rem;
+        line-height:1.7;
+    }
+
+    .contact-info{
+        gap:11px;
+    }
+
+    .contact-item{
+        gap:13px;
+        padding:15px;
+        border-radius:15px;
+    }
+
+    .contact-item:hover{
+        transform:none;
+    }
+
+    .contact-icon{
+        flex:0 0 43px;
+        width:43px;
+        height:43px;
+        border-radius:12px;
+        font-size:.65rem;
+    }
+
+    .contact-item strong{
+        font-size:.86rem;
+    }
+
+    .contact-item span{
+        font-size:.73rem;
+    }
+
+    .contact-card{
+        padding:25px 20px;
+        border-radius:20px;
+    }
+
+    .contact-card-heading{
+        margin-bottom:25px;
+    }
+
+    .contact-card-heading h3{
+        font-size:1.3rem;
+    }
+
+    .contact-card-heading p{
+        font-size:.85rem;
+    }
+
+    .contact-form{
+        gap:17px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+        padding:13px 14px;
+        font-size:.87rem;
+    }
+
+    .form-group textarea{
+        min-height:120px;
+    }
+
+}
+
+
+/* =====================================================
+                     PETITS MOBILES
+===================================================== */
+
+@media (max-width: 420px){
+
+    .contact-heading h2{
+        font-size:1.8rem;
+    }
+
+    .contact-intro h3{
+        font-size:1.5rem;
+    }
+
+    .contact-card{
+        padding:22px 16px;
+    }
+
+    .contact-item{
+        padding:13px;
+    }
+
+    .contact-icon{
+        flex:0 0 40px;
+        width:40px;
+        height:40px;
+    }
+
+}
