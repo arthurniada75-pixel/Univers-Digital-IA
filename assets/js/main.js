@@ -764,3 +764,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+/* =====================================================
+              FORMULAIRE CONTACT → WHATSAPP
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const contactForm = document.getElementById("contactForm");
+
+    if (!contactForm) {
+        return;
+    }
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("contactName").value.trim();
+        const phone = document.getElementById("contactPhone").value.trim();
+        const service = document.getElementById("contactService").value;
+        const message = document.getElementById("contactMessage").value.trim();
+
+        if (!name || !phone || !service || !message) {
+            return;
+        }
+
+        const whatsappMessage =
+            "Bonjour UNIVERS DIGITAL & IA,%0A%0A" +
+            "Je souhaite vous contacter concernant un projet.%0A%0A" +
+            "Nom : " + encodeURIComponent(name) + "%0A" +
+            "Téléphone / WhatsApp : " + encodeURIComponent(phone) + "%0A" +
+            "Service recherché : " + encodeURIComponent(service) + "%0A%0A" +
+            "Description du projet :%0A" +
+            encodeURIComponent(message);
+
+        const whatsappURL =
+            "https://wa.me/22675210944?text=" + whatsappMessage;
+
+        window.open(
+            whatsappURL,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+    });
+
+});
