@@ -787,26 +787,27 @@ document.addEventListener("DOMContentLoaded", function () {
         const message = document.getElementById("contactMessage").value.trim();
 
         if (!name || !phone || !service || !message) {
+            alert("Veuillez remplir tous les champs avant d'envoyer votre demande.");
             return;
         }
 
         const whatsappMessage =
-            "Bonjour UNIVERS DIGITAL & IA,%0A%0A" +
-            "Je souhaite vous contacter concernant un projet.%0A%0A" +
-            "Nom : " + encodeURIComponent(name) + "%0A" +
-            "Téléphone / WhatsApp : " + encodeURIComponent(phone) + "%0A" +
-            "Service recherché : " + encodeURIComponent(service) + "%0A%0A" +
-            "Description du projet :%0A" +
-            encodeURIComponent(message);
+`Bonjour UNIVERS DIGITAL & IA,
+
+Je souhaite vous contacter concernant un projet.
+
+Nom : ${name}
+Téléphone / WhatsApp : ${phone}
+Service recherché : ${service}
+
+Description du projet :
+${message}`;
 
         const whatsappURL =
-            "https://wa.me/22675210944?text=" + whatsappMessage;
+            "https://wa.me/22675210944?text=" +
+            encodeURIComponent(whatsappMessage);
 
-        window.open(
-            whatsappURL,
-            "_blank",
-            "noopener,noreferrer"
-        );
+        window.open(whatsappURL, "_blank");
 
     });
 
