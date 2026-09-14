@@ -623,3 +623,73 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+/* =====================================================
+                ANIMATION DES CHIFFRES
+===================================================== */
+
+const statNumbers = document.querySelectorAll(".stat-number");
+
+if (statNumbers.length) {
+
+    const animateStat = (element) => {
+
+        const target = Number(element.dataset.target);
+
+        if (Number.isNaN(target)) return;
+
+        const duration = 1400;
+        const startTime = performance.now();
+
+        const updateNumber = (currentTime) => {
+
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Animation avec ralentissement progressif
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+            const currentValue = Math.floor(easedProgress * target);
+
+            element.textContent = currentValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateNumber);
+            } else {
+                element.textContent = target;
+            }
+        };
+
+        requestAnimationFrame(updateNumber);
+    };
+
+
+    const statsObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    statNumbers.forEach((number) => {
+                        animateStat(number);
+                    });
+
+                    observer.disconnect();
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.35
+        }
+    );
+
+
+    const statsSection = document.querySelector(".stats");
+
+    if (statsSection) {
+        statsObserver.observe(statsSection);
+    }
+}
