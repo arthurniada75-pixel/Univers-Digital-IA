@@ -1525,3 +1525,132 @@
     }
 
 }
+
+/* =====================================================
+                 RESPONSIVE — FAQ
+===================================================== */
+
+@media (max-width: 1024px){
+
+    .faq{
+        padding:90px 0;
+    }
+
+    .faq-heading{
+        margin-bottom:50px;
+    }
+
+    .faq-list{
+        max-width:850px;
+    }
+
+}
+
+
+/* =====================================================
+                       TABLETTE
+===================================================== */
+
+@media (max-width: 767px){
+
+    .faq{
+        padding:75px 0;
+    }
+
+    .faq-heading{
+        margin-bottom:40px;
+    }
+
+    .faq-label{
+        padding:8px 13px;
+        font-size:.72rem;
+    }
+
+    .faq-heading h2{
+        font-size:2rem;
+        line-height:1.18;
+    }
+
+    .faq-heading p{
+        font-size:.92rem;
+        line-height:1.7;
+    }
+
+    .faq-item{
+        margin-bottom:12px;
+        border-radius:16px;
+    }
+
+    .faq-question{
+        gap:15px;
+        padding:19px 18px;
+        font-size:.92rem;
+    }
+
+    .faq-icon{
+        flex:0 0 31px;
+        width:31px;
+        height:31px;
+        font-size:1.2rem;
+    }
+
+    .faq-answer p{
+        padding:0 18px;
+        font-size:.88rem;
+        line-height:1.7;
+    }
+
+    .faq-item.active .faq-answer p{
+        padding:0 18px 20px;
+    }
+
+    .faq-cta{
+        margin-top:35px;
+        padding:25px 20px;
+        border-radius:18px;
+    }
+
+    .faq-cta p{
+        font-size:.92rem;
+        line-height:1.6;
+    }
+
+}
+
+
+/* =====================================================
+                    PETITS MOBILES
+===================================================== */
+
+@media (max-width: 420px){
+
+    .faq-heading h2{
+        font-size:1.8rem;
+    }
+
+    .faq-question{
+        padding:17px 15px;
+        font-size:.88rem;
+    }
+
+    .faq-icon{
+        flex:0 0 29px;
+        width:29px;
+        height:29px;
+        font-size:1.1rem;
+    }
+
+    .faq-answer p{
+        padding:0 15px;
+        font-size:.84rem;
+    }
+
+    .faq-item.active .faq-answer p{
+        padding:0 15px 18px;
+    }
+
+    .faq-cta{
+        padding:22px 16px;
+    }
+
+}
