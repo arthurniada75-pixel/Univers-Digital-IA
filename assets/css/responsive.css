@@ -1434,3 +1434,94 @@
     }
 
 }
+
+/* =====================================================
+            RESPONSIVE — NOS CHIFFRES CLÉS
+===================================================== */
+
+@media (max-width: 1024px){
+
+    .stats{
+        padding:90px 0;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .stat-card{
+        min-height:180px;
+    }
+
+}
+
+@media (max-width: 767px){
+
+    .stats{
+        padding:75px 0;
+    }
+
+    .stats-heading{
+        margin-bottom:40px;
+    }
+
+    .stats-label{
+        font-size:.72rem;
+        padding:8px 13px;
+    }
+
+    .stats-heading h2{
+        font-size:2rem;
+        line-height:1.18;
+    }
+
+    .stats-heading p{
+        font-size:.92rem;
+        line-height:1.7;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .stat-card{
+        min-height:155px;
+        padding:25px 20px;
+        border-radius:18px;
+    }
+
+    .stat-number{
+        font-size:2.8rem;
+    }
+
+    .stat-symbol{
+        font-size:1.7rem;
+    }
+
+    .stat-card p{
+        margin-top:12px;
+        font-size:.88rem;
+    }
+
+    .stats-note{
+        margin-top:30px;
+        padding:14px 18px;
+        border-radius:18px;
+        font-size:.82rem;
+    }
+
+}
+
+@media (max-width: 420px){
+
+    .stats-heading h2{
+        font-size:1.8rem;
+    }
+
+    .stat-card{
+        min-height:145px;
+    }
+
+}
