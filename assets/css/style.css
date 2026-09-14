@@ -3013,3 +3013,218 @@ ul{
     border:0;
     cursor:pointer;
 }
+
+/* =====================================================
+                       FOOTER
+===================================================== */
+
+.footer{
+    position:relative;
+    padding:85px 0 0;
+    background:#08142d;
+    color:#ffffff;
+    overflow:hidden;
+}
+
+.footer::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    top:-280px;
+    right:-180px;
+    border-radius:50%;
+    background:#102755;
+    opacity:.7;
+    pointer-events:none;
+}
+
+.footer::after{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    bottom:-230px;
+    left:-170px;
+    border-radius:50%;
+    background:#0d2148;
+    opacity:.8;
+    pointer-events:none;
+}
+
+
+/* =====================================================
+                    CONTENU PRINCIPAL
+===================================================== */
+
+.footer-main{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1.25fr 1.15fr;
+    gap:50px;
+    padding-bottom:65px;
+}
+
+.footer-brand{
+    max-width:360px;
+}
+
+.footer-logo{
+    display:inline-flex;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.footer-logo img{
+    display:block;
+    width:auto;
+    max-width:185px;
+    height:auto;
+    max-height:65px;
+    object-fit:contain;
+}
+
+.footer-brand > p{
+    margin:0 0 25px;
+    color:#b8c5da;
+    font-size:.9rem;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+                     BOUTON FOOTER
+===================================================== */
+
+.footer-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 20px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:10px;
+    background:#2563eb;
+    color:#ffffff;
+    font-size:.84rem;
+    font-weight:700;
+    text-decoration:none;
+    transition:
+        background .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.footer-cta:hover{
+    background:#1747c7;
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+}
+
+
+/* =====================================================
+                  COLONNES DU FOOTER
+===================================================== */
+
+.footer-column h3{
+    margin:5px 0 22px;
+    color:#ffffff;
+    font-size:.95rem;
+    font-weight:700;
+}
+
+.footer-column ul{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.footer-column ul a{
+    color:#aebbd0;
+    font-size:.84rem;
+    line-height:1.5;
+    text-decoration:none;
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+.footer-column ul a:hover{
+    color:#ffffff;
+    transform:translateX(3px);
+}
+
+
+/* =====================================================
+                     CONTACT FOOTER
+===================================================== */
+
+.footer-contact{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.footer-contact > a{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    margin-bottom:15px;
+    color:#aebbd0;
+    font-size:.8rem;
+    line-height:1.5;
+    text-decoration:none;
+    transition:color .25s ease;
+}
+
+.footer-contact > a:hover{
+    color:#ffffff;
+}
+
+.footer-contact strong{
+    color:#ffffff;
+    font-size:.84rem;
+    font-weight:600;
+    overflow-wrap:anywhere;
+}
+
+
+/* =====================================================
+                    FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom{
+    position:relative;
+    z-index:1;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+    padding:25px 0;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+.footer-bottom p{
+    margin:0;
+    color:#8fa0ba;
+    font-size:.76rem;
+    line-height:1.6;
+}
+
+.footer-bottom p:last-child{
+    text-align:right;
+}
+
+
+/* =====================================================
+                    ÉTAT FOCUS
+===================================================== */
+
+.footer a:focus-visible{
+    outline:2px solid #60a5fa;
+    outline-offset:4px;
+    border-radius:4px;
+}
