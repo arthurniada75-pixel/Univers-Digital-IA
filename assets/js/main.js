@@ -625,71 +625,87 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =====================================================
-                ANIMATION DES CHIFFRES
+          ANIMATION DES CHIFFRES CLÉS
 ===================================================== */
 
-const statNumbers = document.querySelectorAll(".stat-number");
+document.addEventListener("DOMContentLoaded", function () {
 
-if (statNumbers.length) {
+    const statNumbers = document.querySelectorAll(".stat-number");
 
-    const animateStat = (element) => {
+    if (!statNumbers.length) {
+        return;
+    }
 
-        const target = Number(element.dataset.target);
+    function animateNumber(element) {
 
-        if (Number.isNaN(target)) return;
+        const target = parseInt(element.getAttribute("data-target"), 10);
 
-        const duration = 1400;
+        if (isNaN(target)) {
+            return;
+        }
+
+        const duration = 1500;
+        const start = 0;
         const startTime = performance.now();
 
-        const updateNumber = (currentTime) => {
+        function update(currentTime) {
 
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
 
-            // Animation avec ralentissement progressif
-            const easedProgress = 1 - Math.pow(1 - progress, 3);
+            // Effet d'accélération puis de ralentissement
+            const easedProgress =
+                1 - Math.pow(1 - progress, 3);
 
-            const currentValue = Math.floor(easedProgress * target);
+            const currentNumber = Math.floor(
+                start + (target - start) * easedProgress
+            );
 
-            element.textContent = currentValue;
+            element.textContent = currentNumber;
 
             if (progress < 1) {
-                requestAnimationFrame(updateNumber);
+                requestAnimationFrame(update);
             } else {
                 element.textContent = target;
             }
-        };
+        }
 
-        requestAnimationFrame(updateNumber);
-    };
+        requestAnimationFrame(update);
+    }
 
 
-    const statsObserver = new IntersectionObserver(
-        (entries, observer) => {
+    const statsSection = document.querySelector(".stats");
 
-            entries.forEach((entry) => {
+    if (!statsSection) {
+        return;
+    }
+
+
+    /* Détection de l'apparition de la section */
+
+    const observer = new IntersectionObserver(
+        function (entries, observer) {
+
+            entries.forEach(function (entry) {
 
                 if (entry.isIntersecting) {
 
-                    statNumbers.forEach((number) => {
-                        animateStat(number);
+                    statNumbers.forEach(function (number) {
+                        animateNumber(number);
                     });
 
-                    observer.disconnect();
+                    observer.unobserve(entry.target);
                 }
 
             });
 
         },
         {
-            threshold: 0.35
+            threshold: 0.2
         }
     );
 
 
-    const statsSection = document.querySelector(".stats");
+    observer.observe(statsSection);
 
-    if (statsSection) {
-        statsObserver.observe(statsSection);
-    }
-}
+});
