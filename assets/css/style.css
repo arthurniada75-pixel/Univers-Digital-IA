@@ -3228,3 +3228,260 @@ ul{
     outline-offset:4px;
     border-radius:4px;
 }
+
+/* =====================================================
+                    SECTION FORMATION
+===================================================== */
+
+.training{
+    position:relative;
+    padding:110px 0;
+    background:#ffffff;
+    overflow:hidden;
+}
+
+.training-heading{
+    max-width:760px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.training-label{
+    display:inline-block;
+    margin-bottom:16px;
+    color:#2563eb;
+    font-size:.75rem;
+    font-weight:800;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+}
+
+.training-heading h2{
+    margin:0 0 20px;
+    color:#08142d;
+    font-size:clamp(2rem,4vw,3rem);
+    font-weight:800;
+    line-height:1.15;
+    letter-spacing:-.035em;
+}
+
+.training-heading h2 span{
+    color:#2563eb;
+}
+
+.training-heading p{
+    max-width:680px;
+    margin:0 auto;
+    color:#64748b;
+    font-size:.95rem;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+                    CARTES FORMATION
+===================================================== */
+
+.training-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
+    align-items:stretch;
+}
+
+.training-card{
+    position:relative;
+    min-height:100%;
+    border:1px solid #e3ebf6;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 18px 50px rgba(8,20,45,.07);
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.training-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 25px 60px rgba(8,20,45,.11);
+    border-color:#d2e1f5;
+}
+
+.training-card-content{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    padding:42px;
+}
+
+.training-free{
+    background:#f8fbff;
+}
+
+.training-paid{
+    background:#08142d;
+    border-color:#08142d;
+}
+
+
+/* =====================================================
+                    BADGES
+===================================================== */
+
+.training-badge{
+    display:inline-flex;
+    align-items:center;
+    align-self:flex-start;
+    min-height:30px;
+    margin-bottom:22px;
+    padding:7px 12px;
+    border-radius:999px;
+    background:#eaf3ff;
+    color:#2563eb;
+    font-size:.68rem;
+    font-weight:800;
+    letter-spacing:.08em;
+}
+
+.training-badge-light{
+    background:rgba(255,255,255,.1);
+    color:#8db8ff;
+}
+
+
+/* =====================================================
+                    TITRES
+===================================================== */
+
+.training-card h3{
+    margin:0 0 17px;
+    color:#08142d;
+    font-size:1.45rem;
+    font-weight:800;
+    line-height:1.3;
+    letter-spacing:-.02em;
+}
+
+.training-paid h3{
+    color:#ffffff;
+}
+
+.training-card-content > p{
+    margin:0 0 25px;
+    color:#64748b;
+    font-size:.9rem;
+    line-height:1.75;
+}
+
+.training-paid .training-card-content > p{
+    color:#b8c5da;
+}
+
+
+/* =====================================================
+                    LISTE
+===================================================== */
+
+.training-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin:0 0 32px;
+    padding:0;
+    list-style:none;
+}
+
+.training-list li{
+    position:relative;
+    padding-left:21px;
+    color:#334155;
+    font-size:.84rem;
+    line-height:1.6;
+}
+
+.training-list li::before{
+    content:"";
+    position:absolute;
+    top:.65em;
+    left:0;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#2563eb;
+    transform:translateY(-50%);
+}
+
+.training-paid .training-list li{
+    color:#c4d0e1;
+}
+
+.training-paid .training-list li::before{
+    background:#60a5fa;
+}
+
+
+/* =====================================================
+                    BOUTONS
+===================================================== */
+
+.training-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height:50px;
+    margin-top:auto;
+    padding:13px 20px;
+    border:1px solid #2563eb;
+    border-radius:10px;
+    background:#2563eb;
+    color:#ffffff;
+    font-size:.82rem;
+    font-weight:700;
+    text-align:center;
+    text-decoration:none;
+    transition:
+        background .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.training-button:hover{
+    background:#1747c7;
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+}
+
+.training-button-outline{
+    border-color:rgba(255,255,255,.25);
+    background:transparent;
+    color:#ffffff;
+}
+
+.training-button-outline:hover{
+    border-color:#2563eb;
+    background:#2563eb;
+}
+
+
+/* =====================================================
+                    NOTE FINALE
+===================================================== */
+
+.training-note{
+    max-width:760px;
+    margin:38px auto 0;
+    padding:18px 24px;
+    border:1px solid #e5edf7;
+    border-radius:14px;
+    background:#f8fbff;
+    text-align:center;
+}
+
+.training-note p{
+    margin:0;
+    color:#64748b;
+    font-size:.8rem;
+    line-height:1.7;
+}
