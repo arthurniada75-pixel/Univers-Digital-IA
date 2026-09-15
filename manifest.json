@@ -1,1 +1,21 @@
-
+{
+  "name": "UNIVERS DIGITAL & IA",
+  "short_name": "UNIVERS DIGITAL & IA",
+  "description": "Solutions digitales, intelligence artificielle, publicité, création web et formations.",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#08142d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://d1yei2z3i6k35z.cloudfront.net/15223816/6a70dd6aa7bd21.48896210_ChatGPTImage13mai202618_25_55.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
