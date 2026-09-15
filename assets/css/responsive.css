@@ -1975,3 +1975,150 @@
     }
 
 }
+
+/* =====================================================
+              RESPONSIVE — FORMATION
+===================================================== */
+
+@media (max-width: 1024px){
+
+    .training{
+        padding:90px 0;
+    }
+
+    .training-heading{
+        margin-bottom:50px;
+    }
+
+    .training-grid{
+        gap:22px;
+    }
+
+    .training-card-content{
+        padding:34px;
+    }
+
+    .training-card h3{
+        font-size:1.3rem;
+    }
+
+}
+
+
+/* =====================================================
+                         MOBILE
+===================================================== */
+
+@media (max-width: 767px){
+
+    .training{
+        padding:75px 0;
+    }
+
+    .training-heading{
+        margin-bottom:40px;
+    }
+
+    .training-heading h2{
+        font-size:2rem;
+        line-height:1.2;
+    }
+
+    .training-heading p{
+        font-size:.88rem;
+        line-height:1.75;
+    }
+
+    .training-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .training-card{
+        border-radius:20px;
+    }
+
+    .training-card-content{
+        padding:30px 25px;
+    }
+
+    .training-badge{
+        margin-bottom:18px;
+        font-size:.64rem;
+    }
+
+    .training-card h3{
+        font-size:1.25rem;
+        line-height:1.35;
+    }
+
+    .training-card-content > p{
+        font-size:.86rem;
+        line-height:1.7;
+    }
+
+    .training-list{
+        gap:10px;
+        margin-bottom:28px;
+    }
+
+    .training-list li{
+        font-size:.81rem;
+    }
+
+    .training-button{
+        min-height:48px;
+        font-size:.78rem;
+    }
+
+    .training-note{
+        margin-top:28px;
+        padding:16px 18px;
+    }
+
+    .training-note p{
+        font-size:.76rem;
+    }
+
+}
+
+
+/* =====================================================
+                    PETITS MOBILES
+===================================================== */
+
+@media (max-width: 420px){
+
+    .training{
+        padding:65px 0;
+    }
+
+    .training-heading h2{
+        font-size:1.75rem;
+    }
+
+    .training-heading p{
+        font-size:.84rem;
+    }
+
+    .training-card-content{
+        padding:26px 20px;
+    }
+
+    .training-card h3{
+        font-size:1.15rem;
+    }
+
+    .training-card-content > p{
+        font-size:.82rem;
+    }
+
+    .training-list li{
+        font-size:.78rem;
+    }
+
+    .training-button{
+        padding:12px 15px;
+    }
+
+}
